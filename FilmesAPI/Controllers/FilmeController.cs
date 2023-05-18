@@ -40,7 +40,7 @@ public class FilmeController : ControllerBase
     public IEnumerable<ReadFilmeDTO> ExibeFilmes([FromQuery] int skip = 0, [FromQuery] int take = 50)
     {
         //Filme filme = new Filme("Senhor dos Manés!", "Comédia", 120);
-        return _mapper.Map<List<ReadFilmeDTO>>(_context.Filmes.Skip(skip).Take(take));
+        return _mapper.Map<List<ReadFilmeDTO>>(_context.Filmes.Skip(skip).Take(take).ToList());
     }
 
     [HttpGet("{id}")]
