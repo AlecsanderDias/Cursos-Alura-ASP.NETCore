@@ -2,7 +2,7 @@
 
 namespace UsuariosAPI.Data.Dtos;
 
-public class CreateUsusarioDto
+public class CreateUsuarioDto
 {
     [Required]
     public string UserName { get; set; }
